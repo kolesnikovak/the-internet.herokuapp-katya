@@ -1,0 +1,26 @@
+{
+  "name": "the-internet.herokuapp-katya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolesnikovak/the-internet.herokuapp-katya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolesnikovak/the-internet.herokuapp-katya/issues"
+  },
+  "homepage": "https://github.com/kolesnikovak/the-internet.herokuapp-katya#readme",
+  "dependencies": {
+    "@types/node": "^24.5.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
