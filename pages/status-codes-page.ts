@@ -18,8 +18,5 @@ export class StatusCodesPage {
        
     }
 
-    async verifyHTTPResponse(): Promise<void> {
-        
-    }
 
 }
