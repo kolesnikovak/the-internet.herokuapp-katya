@@ -5,8 +5,9 @@ import { HomePage } from '../pages/home-page'
 test('forgot password page test', async ({page}) => {
 
     let homePage = new HomePage(page)
-    await homePage.forgotPasswordLink.click()
-    
+    await page.goto('https://the-internet.herokuapp.com/')
+    await homePage.clickingForgotPassword()
+
     let forgotPasswordPage = new ForgotPasswordPage(page)
     await forgotPasswordPage.retrievePasswordFunction("katya@bugbeat.com")
 
