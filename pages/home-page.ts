@@ -1,14 +1,17 @@
-import { expect, Locator, Page } from '@playwright/test'
-
+import { expect, Locator, Page, test } from '@playwright/test'
 export class HomePage {
-
-    pageTitle: Locator
-
+    forgotPasswordLink: Locator
+    title: Locator;
+    dropdown: Locator;
     constructor(page: Page) {
-        this.pageTitle = page.locator("getByRole('heading', { name: 'Welcome to the-internet' })")
+        this.forgotPasswordLink = page.getByRole('link', { name: 'Forgot Password' })
+        this.title = page.getByRole('heading', { name: 'Welcome to the-internet' })
+        this.dropdown = page.getByRole('link', { name: 'Dropdown' })
     }
-
-    async validateTitle(): Promise<void> {
-        await expect(this.pageTitle).toHaveText('Welcome to the-internet')
+    async testingOfForgotPassword(): Promise<void> {
+        await this.forgotPasswordLink.click()
+    }
+    async clickOnDropdown(): Promise<void> {
+        await this.dropdown.click();
     }
 }

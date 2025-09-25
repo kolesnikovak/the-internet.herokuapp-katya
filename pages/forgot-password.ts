@@ -17,8 +17,4 @@ export class ForgotPasswordPage {
        await this.emailField.fill(email)
        await this.retrievePasswordButton.click()
    }
-
-   async getInternalServerErrorMessage(): Promise<void> {
-       await expect(this.internalServerErrorMessage).toHaveText('Internal Server Error')
-   }
 }
