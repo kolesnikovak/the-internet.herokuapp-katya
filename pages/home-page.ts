@@ -1,15 +1,18 @@
 import { expect, Locator, Page, test } from '@playwright/test'
 export class HomePage {
     forgotPasswordLink: Locator
-    title: Locator;
-    dropdown: Locator;
-    checkboxes: Locator;
+    title: Locator
+    dropdown: Locator
+    checkboxes: Locator
+    formAuthentication: Locator
+
 
     constructor(page: Page) {
         this.forgotPasswordLink = page.getByRole('link', { name: 'Forgot Password' })
         this.title = page.getByRole('heading', { name: 'Welcome to the-internet' })
         this.dropdown = page.getByRole('link', { name: 'Dropdown' })
         this.checkboxes = page.getByRole('link', { name: 'Checkboxes' })
+        this.formAuthentication = page.getByRole('link', { name: 'Form Authentication' })
     }
     async clickingForgotPassword(): Promise<void> {
         await this.forgotPasswordLink.click()
@@ -20,5 +23,8 @@ export class HomePage {
 
     async clickingOnCheckBoxesLink(): Promise<void> {
         await this.checkboxes.click();
+    }
+    async clickingOnFormAuthenticationLink(): Promise<void> {
+        await this.formAuthentication.click();
     }
 }
