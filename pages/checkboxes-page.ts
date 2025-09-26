@@ -9,7 +9,7 @@ export class CheckBoxesPage {
         this.checkbox2 = page.getByRole('checkbox').nth(1)
     }
  
-    
+
     async validateCheckbox1IsNotChecked(): Promise<void> {
         await expect(this.checkbox1).not.toBeChecked()
     }
@@ -19,6 +19,10 @@ export class CheckBoxesPage {
 
     async clickOnCheckbox1(): Promise<void> {
         await this.checkbox1.click()
+    }
+
+    async validateCheckbox1IsChecked(): Promise<void> {
+        await expect(this.checkbox1).toBeChecked()
     }
 
 

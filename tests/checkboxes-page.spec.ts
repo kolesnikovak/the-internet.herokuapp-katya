@@ -11,4 +11,5 @@ test('Validating Checkboxes page', async ({page}) => {
     await checkBoxesPage.validateCheckbox1IsNotChecked();
     await checkBoxesPage.validateCheckbox2IsChecked();
     await checkBoxesPage.clickOnCheckbox1();
+    await checkBoxesPage.validateCheckbox1IsChecked();
 })
