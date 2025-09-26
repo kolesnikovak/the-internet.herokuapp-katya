@@ -24,6 +24,4 @@ export class CheckBoxesPage {
     async validateCheckbox1IsChecked(): Promise<void> {
         await expect(this.checkbox1).toBeChecked()
     }
-
-
 }
