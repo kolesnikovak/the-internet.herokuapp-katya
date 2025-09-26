@@ -26,8 +26,10 @@ export class FormAuthenticationPage {
     async validateSuccessfulLoginMessage(): Promise<void> {
         await expect(this.greenBannerLoginMessage).toBeVisible()
     }
-    async validateSuccessfulLogoutMessage(): Promise<void> {
+    async clickOnLogoutButton(): Promise<void> {
         await this.logoutButton.click()
+    }
+    async validateSuccessfulLogoutMessage(): Promise<void> {
         await expect(this.greenBannerLogoutMessage).toBeVisible()
     }
 

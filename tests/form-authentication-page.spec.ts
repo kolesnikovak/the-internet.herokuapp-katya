@@ -12,5 +12,6 @@ test ('Validating Form Authentication page', async ({page}) => {
     let formAuthenticationPage = new FormAuthenticationPage(page);
     await formAuthenticationPage.loginFunction('tomsmith', 'SuperSecretPassword!');
     await formAuthenticationPage.validateSuccessfulLoginMessage();
+    await formAuthenticationPage.clickOnLogoutButton();
     await formAuthenticationPage.validateSuccessfulLogoutMessage();
 })
